@@ -1,0 +1,195 @@
+# 🌱 E-WASTE COLLECTION SYSTEM - SETUP GUIDE
+# Localhost pe chalane ke liye step-by-step instructions
+
+====================================================
+STEP 1: PROJECT FILES COPY KAREIN
+====================================================
+
+Yeh folder structure banana hai aapke computer par:
+
+📁 ewaste-project/
+   ├── server.js
+   ├── db.js
+   ├── package.json
+   ├── ewaste.sql
+   └── public/
+       ├── index.html        (Home Page)
+       ├── about.html
+       ├── services.html
+       ├── contact.html
+       ├── commercial.html
+       ├── residential.html
+       ├── events.html
+       └── login.html
+
+====================================================
+STEP 2: MYSQL WORKBENCH - DATABASE SETUP
+====================================================
+
+1. MySQL Workbench kholo
+2. Apna connection select karo (localhost)
+3. Top menu: File → Open SQL Script
+4. ewaste.sql file select karo
+5. Lightning bolt icon (⚡) click karo - "Execute All"
+6. Neeche "Output" panel mein check karo:
+   → "Database Setup Complete!" message aana chahiye
+
+   YA phir directly copy-paste karo:
+   ─────────────────────────────────
+   CREATE DATABASE IF NOT EXISTS ewaste;
+   USE ewaste;
+   (baaki ewaste.sql ka content)
+   ─────────────────────────────────
+
+✅ Tables jo banenge:
+   - users          (Login ke liye)
+   - pickup_requests (Saari 3 pickup forms)
+   - contact_messages (Contact page form)
+   - collection_events (Events data)
+
+====================================================
+STEP 3: NODE.JS INSTALL KAREIN (agar nahi hai)
+====================================================
+
+1. https://nodejs.org/ par jayen
+2. "LTS" version download karein
+3. Install karein (Next → Next → Finish)
+4. Check karein: Command Prompt kholo, likho:
+   node --version
+   → v20.x.x dikhna chahiye
+
+====================================================
+STEP 4: PROJECT DEPENDENCIES INSTALL KAREIN
+====================================================
+
+1. Command Prompt (CMD) kholo
+2. Project folder mein jayen:
+   cd C:\Users\manju\ewaste-project
+   
+   (ya jahan bhi aapne folder rakha hai)
+
+3. Install command:
+   npm install
+
+4. Wait karein... "node_modules" folder ban jayega
+   ✅ Success: "added 150 packages" jaise message aayega
+
+====================================================
+STEP 5: DB.JS FILE CHECK KAREIN
+====================================================
+
+db.js file mein yeh details sahi honi chahiye:
+   host: 'localhost'
+   user: 'lalita'         ← aapka MySQL username
+   password: 'Lalita@123' ← aapka MySQL password
+   database: 'ewaste'
+
+⚠️  IMPORTANT: Agar username/password alag hai to change karo!
+
+====================================================
+STEP 6: SERVER CHALAO
+====================================================
+
+CMD mein (project folder mein):
+   node server.js
+
+Aapko yeh dikhega:
+   ✅ MySQL Database Connected Successfully!
+   🚀 Server running at: http://localhost:3000
+
+====================================================
+STEP 7: BROWSER MEIN WEBSITE KHOLEIN
+====================================================
+
+Browser mein yeh URLs kholo:
+
+🌐 http://localhost:3000/          → Home Page
+🌐 http://localhost:3000/about     → About
+🌐 http://localhost:3000/services  → Services
+🌐 http://localhost:3000/contact   → Contact
+🌐 http://localhost:3000/commercial → Commercial
+🌐 http://localhost:3000/residential → Residential
+🌐 http://localhost:3000/events    → Collection Events
+🌐 http://localhost:3000/login     → Login/Register
+
+====================================================
+STEP 8: TEST KAREIN
+====================================================
+
+Test 1 - Contact Form:
+   1. http://localhost:3000/contact kholo
+   2. Form fill karo aur Submit karo
+   3. MySQL Workbench mein check karo:
+      SELECT * FROM ewaste.contact_messages;
+
+Test 2 - Pickup Form:
+   1. http://localhost:3000/commercial kholo
+   2. Pickup form fill karo
+   3. Check karo:
+      SELECT * FROM ewaste.pickup_requests;
+
+Test 3 - Login:
+   1. http://localhost:3000/login kholo
+   2. Pehle "Register" tab se account banao
+   3. Phir Login karo
+
+====================================================
+COMMON ERRORS AUR SOLUTIONS
+====================================================
+
+❌ Error: "MySQL Connection FAILED"
+   Solution: 
+   - MySQL Workbench mein ewaste database banao
+   - db.js mein username/password check karo
+   - MySQL service chal rahi hai? (Services → MySQL80 → Start)
+
+❌ Error: "Cannot find module 'express'"
+   Solution: 
+   - npm install dobara run karo
+   - Sahi folder mein ho? cd ewaste-project
+
+❌ Error: "Port 3000 already in use"
+   Solution: 
+   - server.js mein PORT = 3001 kar do
+   - Ya CMD mein: taskkill /f /im node.exe
+
+❌ Error: "Access denied for user 'lalita'"
+   Solution:
+   - MySQL Workbench mein yeh run karo:
+     CREATE USER 'lalita'@'localhost' IDENTIFIED BY 'Lalita@123';
+     GRANT ALL PRIVILEGES ON ewaste.* TO 'lalita'@'localhost';
+     FLUSH PRIVILEGES;
+
+====================================================
+DATABASE TABLES DATA DEKHNE KE LIYE
+====================================================
+
+MySQL Workbench mein:
+
+-- Saari contact requests dekhein:
+SELECT * FROM ewaste.contact_messages;
+
+-- Saari pickup requests dekhein:
+SELECT * FROM ewaste.pickup_requests;
+
+-- Service type ke hisaab se dekhein:
+SELECT * FROM ewaste.pickup_requests WHERE service_type = 'commercial';
+SELECT * FROM ewaste.pickup_requests WHERE service_type = 'residential';
+SELECT * FROM ewaste.pickup_requests WHERE service_type = 'collection_event';
+
+-- Registered users dekhein:
+SELECT id, name, email, created_at FROM ewaste.users;
+
+====================================================
+PROJECT BAND KARNA
+====================================================
+
+Server band karne ke liye CMD mein:
+   Ctrl + C
+
+Server dobara start karne ke liye:
+   node server.js
+
+====================================================
+© 2026 E-Waste Collection System
+====================================================

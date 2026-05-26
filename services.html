@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Waste Collection - Services</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body { font-family: Arial, sans-serif; }
+        header {
+            background: #0a8dad; color: white;
+            padding: 15px 50px; display: flex;
+            justify-content: space-between; align-items: center;
+        }
+        header h1 { font-size: 24px; }
+        nav a { color: white; margin-left: 20px; text-decoration: none; font-weight: bold; }
+        .btn-nav {
+            background: #30a502; padding: 10px 20px;
+            color: white; font-size: 15px; border-radius: 5px; text-decoration: none;
+        }
+        .btn-green {
+            background: #30a502; padding: 10px 20px; border: none;
+            color: white; font-size: 15px; border-radius: 5px;
+            text-decoration: none; display: inline-block; margin-top: 10px;
+        }
+        .hero {
+            background: linear-gradient(rgba(155,94,94,0.6), rgba(0,0,0,0.6)),
+            url('https://images.unsplash.com/photo-1518770660439-4636190af475');
+            background-size: cover; background-position: center;
+            color: white; padding: 100px 20px; text-align: center;
+        }
+        .hero h1 { font-size: 50px; font-weight: bold; }
+        .service-card {
+            border: none; border-radius: 15px; transition: 0.4s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1); height: 100%;
+        }
+        .service-card:hover { transform: translateY(-10px); }
+        .icon { font-size: 50px; color: #198754; margin-bottom: 20px; }
+        .section-title { text-align: center; margin-bottom: 50px; font-weight: bold; color: #0b5d1e; }
+        .section { padding: 50px; text-align: center; }
+        .footer-nav { background: #198754; color: white; padding: 30px 50px; display: flex; justify-content: space-between; }
+        .footer-nav div { width: 30%; }
+        .footer-nav h2 { font-size: 18px; margin-bottom: 10px; }
+        .footer-nav a { color: #cde; text-decoration: none; display: block; margin: 5px 0; }
+        .footer { background-color: #198754; color: white; text-align: center; padding: 15px; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>The E-Waste Collector</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/services">Services</a>
+            <a href="/about">About</a>
+            <a href="/contact">Contact</a>
+            <a href="/contact" class="btn-nav">Request Quote</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Services</h1>
+        <h3>Safe, Smart & Eco-Friendly E-Waste Recycling Solutions</h3>
+    </section>
+
+    <section class="container py-5">
+        <h2 class="section-title">Our Services</h2>
+        <h4 class="text-center mb-4">We service the area for Business Clean-Outs, Community Events, and Residential Pickups.</h4>
+
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card service-card p-4 text-center">
+                    <i class="fas fa-recycle icon"></i>
+                    <h4>Commercial E-Waste Removal</h4>
+                    <p>Secure IT Disposition & Data Destruction</p>
+                    <a href="/commercial" class="btn-green">Give Order</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card service-card p-4 text-center">
+                    <i class="fas fa-truck icon"></i>
+                    <h4>Residential Services</h4>
+                    <p>Pickups & Drop Offs</p>
+                    <a href="/residential" class="btn-green">Give Order</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card service-card p-4 text-center">
+                    <i class="fas fa-laptop icon"></i>
+                    <h4>Collection Events</h4>
+                    <p>Sustainable Collection Events for Businesses, Schools, and Municipalities</p>
+                    <a href="/events" class="btn-green">Give Order</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Reach Us With Any Additional Questions</h2>
+        <p>✔ Eco-friendly process | ✔ Certified recycling | ✔ Fast pickup service</p>
+        <br>
+        <a href="tel:+918889136164" class="btn-green">Call: +91 8889136164</a>
+        &nbsp;
+        <a href="/contact" class="btn-green">Email Us Directly</a>
+    </section>
+
+    <nav class="footer-nav">
+        <div>
+            <h2>THE E-WASTE PROJECT</h2>
+            <p>E-Waste Recycling & Community Awareness</p>
+            <br>
+            <a href="tel:+918889136164">📞 8889136164</a>
+            <a href="mailto:support@ewaste.com">📧 support@ewaste.com</a>
+        </div>
+        <div>
+            <h2>Services</h2>
+            <a href="/commercial"># Commercial E-Waste Removal</a>
+            <a href="/events"># Collection Events</a>
+            <a href="/residential"># Residential Services</a>
+        </div>
+        <div>
+            <h2>The E-Waste Project</h2>
+            <p>Making our communities' recycling experience as easy and pleasurable as possible.</p>
+        </div>
+    </nav>
+
+    <footer class="footer">
+        <p>© 2026 E-Waste Collection System | All Rights Reserved</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

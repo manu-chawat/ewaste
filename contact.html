@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Contact Us - E-Waste Collection</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        header {
+            background: #0a8dad; color: white;
+            padding: 15px 50px; display: flex;
+            justify-content: space-between; align-items: center;
+        }
+        header h1 { font-size: 24px; }
+        .btn-nav {
+            background: #30a502; padding: 10px 20px; border: none;
+            color: white; font-size: 15px; border-radius: 5px; text-decoration: none;
+        }
+        nav a { color: white; margin-left: 20px; text-decoration: none; font-weight: bold; }
+        .hero {
+            background: linear-gradient(rgba(173,101,101,0.6), rgba(0,0,0,0.6)),
+            url('https://images.unsplash.com/photo-1518770660439-4636190af475');
+            background-size: cover; background-position: center;
+            color: white; padding: 100px 20px; text-align: center;
+        }
+        footer { background: #198754; color: white; text-align: center; padding: 15px; margin-top: 30px; }
+        .footer-nav { background: #198754; color: white; padding: 30px 50px; display: flex; justify-content: space-between; }
+        .footer-nav div { width: 30%; }
+        .footer-nav h2 { font-size: 18px; margin-bottom: 10px; color: white; }
+        .footer-nav a { color: #cde; text-decoration: none; display: block; margin: 5px 0; }
+        .footer-nav p { color: #eee; font-size: 14px; }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <header>
+        <h1>The E-Waste Collector</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/services">Services</a>
+            <a href="/about">About</a>
+            <a href="/contact">Contact</a>
+            <a href="/contact" class="btn-nav">Request Quote</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1 class="text-4xl font-bold">Contact</h1>
+    </section>
+
+    <section class="py-12">
+        <div class="max-w-5xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
+            <div class="grid md:grid-cols-2">
+
+                <!-- Left Side -->
+                <div class="bg-green-600 text-white p-10">
+                    <h2 class="text-4xl font-bold mb-6">Request Pickup</h2>
+                    <p class="mb-6">Have questions about e-waste recycling? Contact our support team anytime.</p>
+                    <div class="space-y-4">
+                        <p>📍 Rajasthan, India</p>
+                        <p>📞 +91 8889136164</p>
+                        <p>📧 support@ewaste.com</p>
+                    </div>
+                </div>
+
+                <!-- Right Side - Form with POST action -->
+                <div class="p-10">
+                    <h2 class="text-3xl font-bold mb-6 text-green-600">Request Form</h2>
+
+                    <form action="/Request" method="POST">
+                        <div class="mb-4">
+                            <label class="block mb-2 font-semibold">Full Name</label>
+                            <input type="text" name="name" placeholder="Enter your name"
+                                   class="w-full border p-3 rounded" required>
+                        </div>
+                        <div class="mb-4">
+                            <label class="block mb-2 font-semibold">Email</label>
+                            <input type="email" name="email" placeholder="Enter your email"
+                                   class="w-full border p-3 rounded" required>
+                        </div>
+                        <div class="mb-4">
+                            <label class="block mb-2 font-semibold">Phone No.</label>
+                            <input type="text" name="phone no." placeholder="Enter your phone no."
+                                   class="w-full border p-3 rounded" required>
+                        </div>
+                        <div class="mb-4">
+                            <label class="block mb-2 font-semibold">Message</label>
+                            <textarea name="message" rows="5" placeholder="Write your message..."
+                                      class="w-full border p-3 rounded" required></textarea>
+                        </div>
+                        <button type="submit"
+                                class="bg-green-600 text-white px-6 py-3 rounded hover:bg-green-700 w-full">
+                            Submit
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <nav class="footer-nav">
+        <div>
+            <h2>THE E-WASTE PROJECT</h2>
+            <p>E-Waste Recycling & Community Awareness</p>
+            <br>
+            <a href="tel:+918889136164">📞 8889136164</a>
+            <a href="mailto:support@ewaste.com">📧 support@ewaste.com</a>
+        </div>
+        <div>
+            <h2>Services</h2>
+            <a href="/commercial"># Commercial E-Waste Removal</a>
+            <a href="/events"># Collection Events</a>
+            <a href="/residential"># Residential Services</a>
+        </div>
+        <div>
+            <h2>The E-Waste Project</h2>
+            <p>Making our communities' recycling experience easy and pleasurable.</p>
+        </div>
+    </nav>
+
+    <footer>
+        © 2026 E-Waste Collection | All Rights Reserved
+    </footer>
+</body>
+</html>

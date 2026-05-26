@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - E-Waste</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: Arial; background: #f4f7f6; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
+        .card { background: white; padding: 40px; border-radius: 15px; box-shadow: 0 4px 20px rgba(0,0,0,0.15); width: 400px; }
+        .logo { text-align: center; font-size: 40px; margin-bottom: 10px; }
+        h2 { color: #1a5c38; text-align: center; margin-bottom: 25px; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; color: #333; font-size: 14px; }
+        input { width: 100%; padding: 10px 14px; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 18px; font-size: 14px; outline: none; }
+        input:focus { border-color: #1a5c38; }
+        button { width: 100%; background: #1a5c38; color: white; border: none; padding: 12px; border-radius: 8px; font-size: 16px; cursor: pointer; }
+        button:hover { background: #145230; }
+        .login-link { text-align: center; margin-top: 15px; font-size: 14px; color: #666; }
+        .login-link a { color: #1a5c38; text-decoration: none; font-weight: bold; }
+        .login-link a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="logo">🌱</div>
+        <h2>Register Karein</h2>
+        <form action="/register" method="POST">
+            <label>Full Name</label>
+            <input type="text" name="name" placeholder="Apna naam daalo" required />
+
+            <label>Email</label>
+            <input type="email" name="email" placeholder="Apna email daalo" required />
+
+            <label>Password</label>
+            <input type="password" name="password" placeholder="Password banao" required />
+
+            <button type="submit">✅ Register Karein</button>
+        </form>
+        <div class="login-link">
+            Already account hai? <a href="/login">Login Karein</a>
+        </div>
+    </div>
+</body>
+</html>

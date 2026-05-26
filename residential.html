@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Residential E-Waste Services</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+        body { background: #f4f7f6; color: #333; }
+        header {
+            background: #0a8dad; color: white;
+            padding: 15px 50px; display: flex;
+            justify-content: space-between; align-items: center;
+        }
+        header h1 { font-size: 24px; }
+        nav a { color: white; margin-left: 20px; text-decoration: none; font-weight: bold; }
+        .btn-nav {
+            background: #30a502; padding: 10px 20px;
+            color: white; font-size: 15px; border-radius: 5px; text-decoration: none;
+        }
+        .hero {
+            height: 80vh;
+            background: url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200')
+                        no-repeat center center/cover;
+            display: flex; align-items: center; justify-content: center;
+            text-align: center; color: white; padding: 20px;
+        }
+        .hero-content { background: rgba(0,0,0,0.6); padding: 40px; border-radius: 10px; }
+        .hero-content h2 { font-size: 45px; margin-bottom: 20px; }
+        .hero-content p { font-size: 18px; line-height: 1.6; }
+        .hero-content a {
+            display: inline-block; margin-top: 25px; padding: 15px 30px;
+            border: none; background: #00b33c; color: white;
+            font-size: 18px; border-radius: 5px; text-decoration: none;
+        }
+        .services { padding: 70px 50px; text-align: center; }
+        .services h2 { font-size: 40px; margin-bottom: 40px; color: #0b5d1e; }
+        .service-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 25px; }
+        .card { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: 0.3s; }
+        .card:hover { transform: translateY(-10px); }
+        .card img { width: 80px; margin-bottom: 20px; }
+        .card h3 { margin-bottom: 15px; color: #0b5d1e; }
+        .form-section { background: #e9f7ec; padding: 70px 50px; }
+        .form-section h2 { text-align: center; margin-bottom: 30px; color: #0b5d1e; font-size: 38px; }
+        .form-box {
+            max-width: 750px; margin: auto; background: white;
+            padding: 50px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .form-box label { font-weight: bold; margin-top: 15px; display: block; }
+        .form-box input, .form-box select, .form-box textarea {
+            width: 100%; padding: 15px; margin-top: 8px;
+            border-radius: 6px; border: 1px solid #ccc; font-size: 15px;
+        }
+        .form-box button {
+            width: 100%; padding: 15px; border: none;
+            background: #0b5d1e; color: white; font-size: 18px;
+            border-radius: 5px; cursor: pointer; margin-top: 20px;
+        }
+        .form-box button:hover { background: #084915; }
+        .footer-nav { background: #198754; color: white; padding: 30px 50px; display: flex; justify-content: space-between; }
+        .footer-nav div { width: 30%; }
+        .footer-nav h2 { font-size: 18px; margin-bottom: 10px; }
+        .footer-nav a { color: #cde; text-decoration: none; display: block; margin: 5px 0; }
+        footer { background: #0b5d1e; color: white; text-align: center; padding: 20px; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>The E-Waste Collector</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/services">Services</a>
+            <a href="/about">About</a>
+            <a href="/contact">Contact</a>
+            <a href="/contact" class="btn-nav">Request Quote</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Residential E-Waste Collection Services</h2>
+            <p>Safely dispose of your old electronics and help protect the environment.
+               We provide door-to-door residential e-waste collection services.</p>
+            <a href="/contact">Book Pickup</a>
+        </div>
+    </section>
+
+    <section class="services">
+        <h2>Our Residential Services</h2>
+        <div class="service-container">
+            <div class="card">
+                <img src="https://cdn-icons-png.flaticon.com/512/1048/1048953.png" alt="Home Pickup">
+                <h3>Home Pickup</h3>
+                <p>Easy doorstep pickup for old laptops, computers, televisions, mobile phones, and batteries.</p>
+            </div>
+            <div class="card">
+                <img src="https://cdn-icons-png.flaticon.com/512/679/679720.png" alt="Safe Recycling">
+                <h3>Safe Recycling</h3>
+                <p>Environment-friendly recycling process to reduce pollution and protect natural resources.</p>
+            </div>
+            <div class="card">
+                <img src="https://cdn-icons-png.flaticon.com/512/2921/2921222.png" alt="Data Destruction">
+                <h3>Data Destruction</h3>
+                <p>Secure deletion of personal data from old devices before recycling.</p>
+            </div>
+            <div class="card">
+                <img src="https://cdn-icons-png.flaticon.com/512/2917/2917995.png" alt="Eco Awareness">
+                <h3>Eco Awareness</h3>
+                <p>Promoting eco-friendly habits and awareness for responsible e-waste disposal.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Residential Pickup Form - Database se connected -->
+    <section class="form-section">
+        <h2>Schedule Your Residential E-Waste Pickup</h2>
+        <div class="form-box">
+            <form action="/residential-pickup" method="POST">
+                <label>FULL NAME</label>
+                <input type="text" name="name" placeholder="Enter Your Name" required>
+
+                <label>EMAIL</label>
+                <input type="email" name="email" placeholder="Enter Your Email" required>
+
+                <label>HOME ADDRESS</label>
+                <input type="text" name="address" placeholder="Enter Your Home Address" required>
+
+                <label>ELECTRONIC ITEM TYPE</label>
+                <select name="service" required>
+                    <option value="">Select Item Type</option>
+                    <option value="TV, Computer, Laptop">TV, Computer, Laptop</option>
+                    <option value="Keyboard, Mouse, Battery, Screen">Keyboard, Mouse, Battery, Screen</option>
+                    <option value="Mobile Phone, Tablet">Mobile Phone, Tablet</option>
+                    <option value="Other Electronic Items">Other Electronic Items</option>
+                </select>
+
+                <button type="submit">Submit Residential Request</button>
+            </form>
+        </div>
+    </section>
+
+    <nav class="footer-nav">
+        <div>
+            <h2>THE E-WASTE PROJECT</h2>
+            <p>E-Waste Recycling & Community Awareness</p>
+            <br>
+            <a href="tel:+918889136164">📞 8889136164</a>
+            <a href="mailto:support@ewaste.com">📧 support@ewaste.com</a>
+        </div>
+        <div>
+            <h2>Services</h2>
+            <a href="/commercial"># Commercial E-Waste Removal</a>
+            <a href="/events"># Collection Events</a>
+            <a href="/residential"># Residential Services</a>
+        </div>
+        <div>
+            <h2>The E-Waste Project</h2>
+            <p>Making our communities' recycling experience easy and pleasurable.</p>
+        </div>
+    </nav>
+    <footer>
+        <p>© 2026 E-Waste Care | Residential Recycling Services</p>
+    </footer>
+</body>
+</html>

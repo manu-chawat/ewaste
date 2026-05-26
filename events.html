@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Waste Collection Events</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f5f7f6; }
+        header {
+            background: #0a8dad; color: white;
+            padding: 15px 50px; display: flex;
+            justify-content: space-between; align-items: center;
+        }
+        header h1 { font-size: 24px; }
+        nav a { color: white; margin-left: 20px; text-decoration: none; font-weight: bold; }
+        .btn-nav {
+            background: #30a502; padding: 10px 20px;
+            color: white; font-size: 15px; border-radius: 5px; text-decoration: none;
+        }
+        .hero-section {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+            url('https://images.unsplash.com/photo-1520607162513-77705c0f0d4a');
+            background-size: cover; background-position: center;
+            height: 350px; display: flex; justify-content: center;
+            align-items: center; text-align: center; color: white;
+        }
+        .hero-section h1 { font-size: 50px; font-weight: bold; }
+        .section-title { color: #198754; font-weight: bold; margin-bottom: 20px; }
+        .event-card {
+            background: white; border-radius: 10px;
+            overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: 0.3s; height: 100%;
+        }
+        .event-card:hover { transform: translateY(-5px); }
+        .event-card img { width: 100%; height: 220px; object-fit: cover; }
+        .event-content { padding: 20px; }
+        .btn-success { width: 100%; }
+        .form-section { background: #e9f7ec; padding: 70px 50px; }
+        .form-section h2 { text-align: center; margin-bottom: 30px; color: #0b5d1e; font-size: 38px; }
+        .form-box {
+            max-width: 700px; margin: auto; background: white;
+            padding: 50px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .form-box label { font-weight: bold; margin-top: 15px; display: block; }
+        .form-box input, .form-box select {
+            width: 100%; padding: 15px; margin-top: 8px;
+            border-radius: 6px; border: 1px solid #ccc; font-size: 15px;
+        }
+        .form-box button {
+            width: 100%; padding: 15px; border: none;
+            background: #0b5d1e; color: white; font-size: 18px;
+            border-radius: 5px; cursor: pointer; margin-top: 20px;
+        }
+        .form-box button:hover { background: #084915; }
+        .footer-nav { background: #198754; color: white; padding: 30px 50px; display: flex; justify-content: space-between; }
+        .footer-nav div { width: 30%; }
+        .footer-nav h2 { font-size: 18px; margin-bottom: 10px; }
+        .footer-nav a { color: #cde; text-decoration: none; display: block; margin: 5px 0; }
+        .footer { background-color: #198754; color: white; text-align: center; padding: 15px; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>The E-Waste Collector</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/services">Services</a>
+            <a href="/about">About</a>
+            <a href="/contact">Contact</a>
+            <a href="/contact" class="btn-nav">Request Quote</a>
+        </nav>
+    </header>
+
+    <section class="hero-section">
+        <div>
+            <h1>E-Waste Collection Events</h1>
+            <p>Join our community recycling drives and help create a cleaner environment.</p>
+        </div>
+    </section>
+
+    <div class="container mt-5">
+        <div class="text-center mb-5">
+            <h2 class="section-title">Upcoming E-Waste Events</h2>
+            <p>Participate in our local electronic waste collection events and recycle responsibly.</p>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="event-card">
+                    <img src="https://images.unsplash.com/photo-1497493292307-31c376b6e479?w=400" alt="Event">
+                    <div class="event-content">
+                        <h4 class="text-success">Community Recycling Drive</h4>
+                        <p>📅 Date: 15 June 2026</p>
+                        <p>📍 Location: City Community Hall</p>
+                        <p>Bring your old laptops, mobile phones, batteries for safe recycling.</p>
+                        <a href="#pickup-form" class="btn btn-success">Register Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="event-card">
+                    <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400" alt="Event">
+                    <div class="event-content">
+                        <h4 class="text-success">School Awareness Program</h4>
+                        <p>📅 Date: 25 June 2026</p>
+                        <p>📍 Location: Green Valley School</p>
+                        <p>Learn about e-waste management and eco-friendly recycling activities.</p>
+                        <a href="#pickup-form" class="btn btn-success">Register Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="event-card">
+                    <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=400" alt="Event">
+                    <div class="event-content">
+                        <h4 class="text-success">Corporate E-Waste Collection</h4>
+                        <p>📅 Date: 10 July 2026</p>
+                        <p>📍 Location: Business Tech Park</p>
+                        <p>Companies can safely dispose of outdated office electronics.</p>
+                        <a href="#pickup-form" class="btn btn-success">Register Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-5">
+            <div class="text-center mb-4">
+                <h2 class="section-title">Why Participate?</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-3">
+                    <div class="event-card text-center p-4">
+                        <h5>Eco-Friendly</h5>
+                        <p>Reduce environmental pollution through safe recycling.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="event-card text-center p-4">
+                        <h5>Free Collection</h5>
+                        <p>Dispose of electronic waste without extra cost.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="event-card text-center p-4">
+                        <h5>Community Awareness</h5>
+                        <p>Spread awareness about responsible e-waste management.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="event-card text-center p-4">
+                        <h5>Secure Disposal</h5>
+                        <p>Ensure proper recycling and secure handling of devices.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Collection Event Pickup Form - Database se connected -->
+    <section class="form-section mt-5" id="pickup-form">
+        <h2>Schedule Your E-Waste Pickup / Register for Event</h2>
+        <div class="form-box">
+            <form action="/event-pickup" method="POST">
+                <label>FULL NAME</label>
+                <input type="text" name="name" placeholder="Enter Your Name" required>
+
+                <label>EMAIL</label>
+                <input type="email" name="email" placeholder="Enter Your Email" required>
+
+                <label>ADDRESS</label>
+                <input type="text" name="address" placeholder="Enter Your Address" required>
+
+                <label>ELECTRONIC ITEM TYPE</label>
+                <select name="service" required>
+                    <option value="">Select Item Type</option>
+                    <option value="TV, Computer, Laptop">TV, Computer, Laptop</option>
+                    <option value="Keyboard, Mouse, Battery, Screen">Keyboard, Mouse, Battery, Screen</option>
+                    <option value="Other Electronic Items">Other Electronic Items</option>
+                </select>
+
+                <button type="submit">Submit Request & Register</button>
+            </form>
+        </div>
+    </section>
+
+    <nav class="footer-nav">
+        <div>
+            <h2>THE E-WASTE PROJECT</h2>
+            <p>E-Waste Recycling & Community Awareness</p>
+            <br>
+            <a href="tel:+918889136164">📞 8889136164</a>
+            <a href="mailto:support@ewaste.com">📧 support@ewaste.com</a>
+        </div>
+        <div>
+            <h2>Services</h2>
+            <a href="/commercial"># Commercial E-Waste Removal</a>
+            <a href="/events"># Collection Events</a>
+            <a href="/residential"># Residential Services</a>
+        </div>
+        <div>
+            <h2>The E-Waste Project</h2>
+            <p>Making our communities' recycling experience easy and pleasurable.</p>
+        </div>
+    </nav>
+    <footer class="footer">
+        <p>© 2026 E-Waste Collection System | All Rights Reserved</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
